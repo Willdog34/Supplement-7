@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "OPCVjBiblj0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\redni\\source\\repos\\Supplement 7\\Supplement 7\\Supplement 7.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\redni\\.nuget\\packages\\xunit.assert\\2.9.3\\xunit.assert.2.9.3.nupkg.sha512"
+  ],
+  "logs": []
+}

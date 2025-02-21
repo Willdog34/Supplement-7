@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+using System;
+using System.Linq;
+
+namespace LinqProject
+{
+public static class LinqFunctions
+{
+/// <summary>
+	/// Returns all even numbers in the array, with an option to skip a specified number of elements.
+	///
+</summary>
+/// <param name="array">The input array of integers.</param>
+/// <param name="skip">The number of even numbers to skip.</param>
+/// <returns>An array of even numbers.</returns>
+public static int[] GetEvenNumbers(int[] array, int skip = 0)
+{
+return array.Where(n => n % 2 == 0).Skip(skip).ToArray();
+}
+
+/// <summary>
+	/// Shuffles the array and returns all odd numbers, with an option to skip a specified number of elements.
+	///
+</summary>
+/// <param name="array">The input array of integers.</param>
+/// <param name="skip">The number of odd numbers to skip.</param>
+/// <returns>An array of odd numbers.</returns>
+public static int[] GetOddNumbersAfterShuffle(int[] array, int skip = 0)
+{
+var shuffled = array.OrderBy(_ => Guid.NewGuid()).ToArray();
+return shuffled.Where(n => n % 2 != 0).Skip(skip).ToArray();
+}
+
+/// <summary>
+	/// Computes and returns the average, minimum, and maximum values of the array.
+	///
+</summary>
+/// <param name="array">The input array of integers.</param>
+/// <returns>A tuple containing the average, minimum, and maximum values.</returns>
+public static (double average, int min, int max) GetArrayStatistics(int[] array)
+{
+return (array.Average(), array.Min(), array.Max());
+}
+}
+}
+
